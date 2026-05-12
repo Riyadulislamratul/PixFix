@@ -2,6 +2,8 @@ import React from "react";
 import Container from "./Container";
 import { Link } from "react-router";
 import nav_chat from "../assets/nav_chat.svg";
+import { FaChevronDown } from "react-icons/fa";
+
 const menuData = [
   { id: 1, label: "Home", href: "/", hasDropdown: true },
   { id: 2, label: "About Us", href: "/about", hasDropdown: true },
@@ -26,10 +28,13 @@ const Navber = () => {
                 <li key={item.id}>
                   <Link
                     to={item.href}
-                    className="text-black_900 font-bold font-titillium text-[16px] leading-normal"
+                    className="inline-flex items-center gap-1 text-black_900 font-bold font-titillium text-[16px] leading-normal"
                   >
-                    {item.label}
-                    {item.hasDropdown && <span> &#8964;</span>}
+                    <span>{item.label}</span>
+
+                    {item.hasDropdown && (
+                      <FaChevronDown className="text-[12px] translate-y-[1px]" />
+                    )}
                   </Link>
                 </li>
               ))}
