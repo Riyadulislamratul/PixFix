@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
           <div className="flex  items-center  gap-8.5 pt-13">
             <Button>
-              read more <ArrowRight size={16} />
+              Read More <ArrowRight size={16} />
             </Button>
             <img src={see} alt="" />
             <a
